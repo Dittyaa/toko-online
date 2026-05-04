@@ -1,0 +1,152 @@
+.navbar {
+  background: linear-gradient(135deg, #1a73e8, #0d47a1);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 8px;
+}
+
+.nav-username {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+}
+
+.nav-auth {
+  display: flex;
+  gap: 8px;
+  margin-left: 8px;
+}
+
+.btn-login {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.5);
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-login:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.btn-register {
+  background: white;
+  color: #1a73e8;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-register:hover {
+  background: #f0f7ff;
+}
+
+.btn-logout {
+  background: rgba(255,255,255,0.15);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-logout:hover {
+  background: rgba(255, 80, 80, 0.3);
+  border-color: rgba(255,80,80,0.5);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #1a73e8;
+    padding: 16px;
+    gap: 8px;
+    align-items: flex-start;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .nav-auth, .nav-user {
+    margin-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
